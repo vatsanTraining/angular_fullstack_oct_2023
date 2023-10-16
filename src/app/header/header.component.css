@@ -1,0 +1,9 @@
+ul>li{
+
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+}
+a{
+    text-decoration: none;
+}

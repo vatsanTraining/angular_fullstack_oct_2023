@@ -1,0 +1,18 @@
+<table class="table table-striped">
+<thead>
+<tr><th>Id</th><th>Product Name</th><th>Price</th></tr>
+
+</thead>
+<tbody>
+<tr *ngFor="let eachProduct of productList">
+
+    <td>{{eachProduct.id}}</td>
+    <td appHightlight>{{eachProduct.productName}}</td>
+    <td>{{eachProduct.ratePerUnit}}</td>
+
+</tr>
+
+</tbody>
+</table>
+
+<button (click)="handleClick()">Click</button>

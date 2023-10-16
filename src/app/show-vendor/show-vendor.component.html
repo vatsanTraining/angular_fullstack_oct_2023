@@ -1,0 +1,17 @@
+
+<div>
+    
+    <input type="search" name="srchFld" [(ngModel)]="srchValue" placeholder="enter the service type">
+</div>
+<div class="row">
+    <div *ngFor="let eachElement of list | filter:'serviceType':srchValue" class="card" 
+     style="width: 300px;">
+        <h2 class="card-header" [ngClass]="headerColor" >{{eachElement.vendorName|uppercase}}</h2>
+        <div class="card-body"> 
+          <p>Service: {{eachElement.serviceType}}</p> 
+          <p appHighLight="increaseFont">📞{{eachElement.phoneNumber}}</p>
+         <p>{{eachElement.url}}</p> 
+        <div class="card-footer"><a [routerLink]="['/edit-vendor',eachElement.id]">Edit</a></div>
+    </div>
+</div>
+

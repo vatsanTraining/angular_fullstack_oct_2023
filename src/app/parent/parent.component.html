@@ -1,0 +1,11 @@
+<!-- //childselector [childINPUTproperty]=parentproperty -->
+<app-child [momsMessage]="parentsMessage"  (response)="handleResponse($event)"></app-child>
+
+<p>{{childResponse|uppercase}}
+</p>
+<p>{{sonsSalary|currency:'INR'}}
+</p>
+<p>{{sonsLoan|number:'5.2-2'}}
+</p>
+
+

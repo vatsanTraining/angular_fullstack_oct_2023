@@ -1,0 +1,7 @@
+<nav class="nav navbar-dark bg-dark-subtle">
+    <ul>
+        <li *ngFor="let eachLink of linkList">
+            <a routerLink={{eachLink.linkPath}}>{{eachLink.linkText}}</a>
+        </li>
+    </ul>
+</nav>

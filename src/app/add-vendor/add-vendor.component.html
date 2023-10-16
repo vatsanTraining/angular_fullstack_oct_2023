@@ -1,0 +1,31 @@
+<!-- (div[class='form-group']>(input[type='text' class='form-control']))*6 -->
+
+<div class="col-md-6">
+<form method="post" (ngSubmit)="onSubmit()" [formGroup]="vendorForm">
+
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" formControlName="id" name="id" id="id" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="vendorName">VendorName</label>
+        <input type="text" formControlName="vendorName" name="vendorName" id="vendorName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="serviceType">Service Type</label>
+        <input type="text" formControlName="serviceType" name="serviceType" id="serviceType" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" formControlName="phoneNumber" name="'phoneNumber" id="phoneNumber" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="url">Url</label>
+        <input type="text" formControlName="url" name="url" id="url" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-primary">
+    </div>
+</form>
+</div>
+{{vendorForm.value|json}}

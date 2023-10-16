@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+.prod-images{
+
+width: 100px;
+height: 100px;
+border: 2px salmon;
+border-radius: 10px;
+}

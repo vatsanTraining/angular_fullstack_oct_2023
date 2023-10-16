@@ -1,0 +1,17 @@
+
+<!-- property Binding One Way Binding -->
+
+
+<img [src]="logo" [alt]="altText" class="prod-images">
+
+<!-- Event Binding  and Property Binding-->
+
+<button [disabled]="isDisabled">Click Laptop I will change</button>
+
+<img [src]="laptop" [alt]="laptopText" (click)="handleClick()" class="prod-images">
+
+<!-- Directive Binding  Two Way Binding -->
+
+ <input type="text"  [(ngModel)]="firstName"> 
+
+ <p>{{firstName}}</p>

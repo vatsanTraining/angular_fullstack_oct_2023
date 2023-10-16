@@ -1,0 +1,14 @@
+<!-- display all the order using ngFor and use the bootstrap card layout -->
+<div class="row">
+
+<div class="card" *ngFor="let eachOrder of orders"  style="width: 300px;">
+    
+    <h2 class="card-header">{{eachOrder.status|uppercase}}</h2>
+
+    <div class="card-body">
+       <p>Order Value: {{eachOrder.value}}</p>
+      <p> Order Id:{{eachOrder.orderId}}</p>
+    </div>
+</div>
+
+</div>
