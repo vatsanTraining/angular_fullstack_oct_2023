@@ -1,0 +1,81 @@
+Model
+
+vendors :{id:number,vendorName:string,service:string,phoneNumber:number,url?:string}
+------------------
+Component:
+
+vendorComponent (P)
+showVendors (C)
+
+---------------
+VendorService
+
+-------------------
+Directive: appHightLight (D)
+
+--------------
+Pipe : Filter(P)
+================================
+Execution Steps
+
+1) ng g interface Vendor
+2) ng g s  Vendor
+3) ng g c  Vendor
+4) ng g c  ShowVendor
+5) Design the Model class add required props
+6) Code the service class and return an array of Vendor
+7) Add Service to the Provider[] of ngModule
+8) Inject the VendorService to the VendorComponent
+9) Capture the values from service in the ngOnInit() method
+10) Add showVendor as the child and pass the vendorList
+11) In the showVendor add a @Input Property 
+12) Iterate over the List in the showVendor Template
+13) Add VendorComponent to Appcomponent template
+14) Start Server ng serve -o
+15) if the page is rendered property with the data add 
+    bootstrap css properties to the template
+----------------------------------------------
+Execution Steps - Intermediate
+1) Create a class in the showComponent.css file
+2) declare a variable in the showComponent.ts and assign
+   it to the class created 
+3) use [ngClass] directive and pass-on the variable name
+
+----------------------------------
+Execution Steps - Advanced
+
+1) Apply ngClass directive to the template
+2) Apply uppercase pipe 
+3) Create CustomDirective  => ng g d HighLight
+4) Create Custom Pipe  =>    ng g p Filter
+5) In the Directive file import ElementRef and Renderer2
+6) Inject the same to the constructor
+7) Add method with @HostListener and event 
+8) Attach it to a HTML element in the template
+9) Implement the transform method of the Custom Pipe
+10) use the Array Filter method and filter the values 
+    based on your condition
+11) Attach the pipe to the showCustomer *ngFor 
+12) Create a Input field with [(ngModel)] 
+13) pass the value of the input field to the filter 
+14) Observe the Filter getting applied
+=========================================
+Form Handling-Creating a Login Form
+1) Create a interface User with username and password
+2) Create a component named Login
+3) Initialize the user in component
+4) create a onSubmit method 
+5) Create a Form in the template
+6) Test 
+================================
+Form Handling - Creating Model Driven Form
+
+1) Create a Component AddVendor
+2) Inject FormBuilder to the constructor
+3) Using formbuilder create the form controls
+4) Add a onSubmit method
+5) Add the formControls to the template
+6) Test 
+7) Create a Component EditVendor
+
+
