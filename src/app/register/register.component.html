@@ -1,0 +1,27 @@
+
+
+<form method="post" (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+
+    <div>
+        <label for="firstName">FirstName</label>
+        <input type="text" formControlName="firstName" id="firstName" name="firstName">
+        <span *ngIf="registerForm.controls['firstName'].invalid" >First Name is requried</span>
+
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" id="email" name="email">
+        <span *ngIf="registerForm.controls['email'].invalid">Mail Id should contain @ symbol</span>
+    </div>
+    <div>
+        <label for="phoneNumber">PhoneNumber</label>
+        <input type="text" formControlName="phoneNumber" id="phoneNumber" name="phoneNumber">
+    </div>
+    
+    <div>
+        <input type="submit" value="Register" class="btn btn-primary" [disabled]="registerForm.invalid">
+    </div>
+
+</form>
+
+{{registerForm.value | json}}

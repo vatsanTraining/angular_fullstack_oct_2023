@@ -10,7 +10,6 @@ export class LinkService {
     this.links = [{"linkText":'Home',"linkPath":''},
             {"linkText":'Product',"linkPath":'/product'},
             {"linkText":'Logout',"linkPath":'/logout'},
-            {"linkText":'Vendor',"linkPath":'/vendor'},
             {"linkText":'Order',"linkPath":'/order'}
           ];
    }

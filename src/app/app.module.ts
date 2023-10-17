@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +22,9 @@ import { LoginComponent } from './login/login.component';
 import { AddVendorComponent } from './add-vendor/add-vendor.component';
 import { EditVendorComponent } from './edit-vendor/edit-vendor.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AuthenticationService } from './authentication.service';
+import { RegisterComponent } from './register/register.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,14 +44,15 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     AddVendorComponent,
     EditVendorComponent,
-    LogoutComponent
+    LogoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,HttpClientModule
   ],
-  providers: [LinkService,VendorService],
+  providers: [LinkService,VendorService,AuthenticationService,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

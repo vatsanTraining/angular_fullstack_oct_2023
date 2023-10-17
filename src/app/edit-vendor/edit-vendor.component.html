@@ -1,2 +1,14 @@
 <p>edit-vendor works!</p>
 {{id}}
+
+<form (ngSubmit)="onSubmit()">
+
+    <input type="text" name="vendorName" [(ngModel)]="toEdit.vendorName">
+    <input type="text" name="serviceType" [(ngModel)]="toEdit.serviceType">
+    <input type="text" name="phoneNumber" [(ngModel)]="toEdit.phoneNumber">
+    <input type="text" name="url" [(ngModel)]="toEdit.url">
+
+
+
+    <input type="submit" value="Edit">
+</form>

@@ -11,6 +11,8 @@
           <p>Service: {{eachElement.serviceType}}</p> 
           <p appHighLight="increaseFont">📞{{eachElement.phoneNumber}}</p>
          <p>{{eachElement.url}}</p> 
+         <div><button (click)="remove(eachElement)">Remove</button></div>
+
         <div class="card-footer"><a [routerLink]="['/edit-vendor',eachElement.id]">Edit</a></div>
     </div>
 </div>

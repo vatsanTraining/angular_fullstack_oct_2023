@@ -13,6 +13,6 @@ export class LogoutComponent {
   }
   ngOnInit(): void {
     this.router.navigate(['/login']);
-    localStorage.removeItem('loggedIn');
+    sessionStorage.removeItem('loggedIn');
   }
 }

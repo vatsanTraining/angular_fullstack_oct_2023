@@ -15,11 +15,10 @@ export class LoginComponent {
   constructor(private router:Router){
 
   }
-
   onSubmit(){
      
     if(this.currentUser.userName==='india' && this.currentUser.passWord=='india'){
-      localStorage.setItem('loggedIn','true');
+      sessionStorage.setItem('loggedIn','logged');
       this.router.navigate(['vendor'])
     }    
   }

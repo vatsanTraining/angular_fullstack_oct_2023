@@ -1,7 +1,20 @@
-<nav class="nav navbar-dark bg-dark-subtle">
-    <ul>
-        <li *ngFor="let eachLink of linkList">
-            <a routerLink={{eachLink.linkPath}}>{{eachLink.linkText}}</a>
-        </li>
-    </ul>
+<nav class="nav navbar-dark bg-primary">
+    
+    <h4 class="navbar-text">Product Manager</h4>
+
+            <a *ngFor="let eachLink of linkList" routerLink={{eachLink.linkPath}} style="color: white;">{{eachLink.linkText}}</a>
+    
+
+    <div class="dropdown">
+        
+        <button class="btn btn-primary dropdown-toggle" type="button"  data-bs-toggle="dropdown">
+          Vendor
+        </button>
+    
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink='/add-vendor'>Add Vendor</a>
+          <a class="dropdown-item" routerLink="/vendor">Show Vendor</a>
+        </div>
+        
+     </div>
 </nav>
