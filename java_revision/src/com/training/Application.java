@@ -19,7 +19,7 @@ public class Application {
 	
 		System.out.println(ram.getAge());
 		
-		
+		System.out.println("Hi");
 		Vendor shyam = new Vendor(102,34);
 		
 		System.out.println(shyam);
