@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>MVC Example</title>
+<title>Insert title here</title>
 </head>
 <body>
 
-<h2>Doctor Management</h2>
-<a href="doctor">Add Doctor</a>
+<h2>Success Page</h2>
+
 </body>
 </html>
