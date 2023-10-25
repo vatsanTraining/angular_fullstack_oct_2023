@@ -10,5 +10,7 @@
 
 <h2>Doctor Management</h2>
 <a href="doctor">Add Doctor</a>
+<a href="product">Add Product</a>
+
 </body>
 </html>

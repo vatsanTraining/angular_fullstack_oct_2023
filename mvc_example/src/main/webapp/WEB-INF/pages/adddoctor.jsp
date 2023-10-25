@@ -15,7 +15,6 @@
 <form:form method="post" modelAttribute="command" action="doctor">
 
 <label>Doctor Id</label>
-
 <form:input path="doctorId"/>
 
 <label>Doctor Name</label>

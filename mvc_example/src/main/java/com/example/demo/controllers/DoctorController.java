@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,7 +35,8 @@ public class DoctorController {
 	}
 	
 	@RequestMapping(path="/doctor", method = RequestMethod.POST)
-	public String submitForm(Doctor doctor) {
+	public String submitForm(@ModelAttribute("doctor") Doctor doctor) {
+		
 		
 		System.out.println("Now:="+doctor);
 		
